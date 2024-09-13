@@ -1,0 +1,272 @@
+body {margin: 0;padding: 0;}
+
+.banner {
+    height: 80vh;
+    background: url(img/banner.jpg);
+    background-size: cover;
+    margin: 55px 0;
+    color:white;
+}
+
+.banner h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 4em;
+    font-weight: 700;
+}
+
+.banner {
+    display: flex;
+    flex: 4;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-book {
+    display: flex;
+    justify-content: center;
+    background-color: #f3f3f3c0;
+    padding: 50px 30px;
+}
+
+.btn-detail{
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #4f4f4f;
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 19px;
+    color: black;
+    z-index: 1;
+   }
+   
+   .btn-detail:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+   }
+   
+   .btn-detail:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #63daca;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+   }
+   
+   .btn-detail:hover {
+    color: #ffffff;
+    border: 1px solid #63daca;
+   }
+   
+   .btn-detail:hover:before {
+    top: -35%;
+    background-color: #63daca;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+   }
+   
+   .btn-detail:hover:after {
+    top: -45%;
+    background-color: #223835;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+   }
+
+.w-70{
+    display: flex;
+    align-items: center;
+    width: 99%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.card img {
+    border-radius: 17px;
+    height: 225px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+.col-md-6 {
+    width: 50%;
+}
+
+.col-md-3 {
+    width: 25%;
+}
+
+.card {
+    margin: 1%;
+}
+
+.card * {
+    margin: 2px;
+    color: #3a3a3a;
+    font-weight: 400;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+  }
+
+  .container1 img {
+    
+    height: 100%;
+    object-fit:cover;
+    
+    -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
+    
+    transform-origin:center;
+    transform:perspective(800px) rotateY(25deg);
+    transition:0.5s;
+  }
+
+
+  .container1:hover img {
+    opacity:0.3;
+  }
+  .container1 img:hover {
+    transform:perspective(800px)       rotateY(0deg);
+    opacity:1;
+  }
+
+.about-section p,
+.about-section h3 {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    font-family: 'Big Shoulders Text', cursive;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+.carousel-item{
+    margin: auto;
+}
+
+.carousel-inner {
+    height: 1000px;
+}
+
+img.d-block.w-70
+{
+    width: 100%;
+    height: 1000px !important;
+}
+
+
+.row-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 30px 20px;
+}
+
+.btn.btn-primary {
+    font-family: 'Big Shoulders Text', cursive;
+    color: #ffffff;
+    background-color: #95999e;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+    border: 0;
+}
+
+.btn.btn-primary:hover {
+    background-color: #747474;
+}
+.opening-time,
+.contact-adress {
+    flex: 1;
+    margin: 30px 20px;
+    font-size: 1.2em;
+}
+
+.form-group p {
+    font-size: 1.2em;
+}
+
+.opening-time p span,
+.contact-adress p span {
+    display: block;
+}
+
+header input.menu-check {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 770px) {
+
+    header input.menu-check{
+        position: relative;
+        display: initial;
+        width: 40px;
+        height: 40px;
+        left:500px;
+        top: -25px;
+    }
+
+    nav{
+        position: absolute;
+        right: -200px;
+        top: 85px;
+        background: wheat;
+        height: 100vh;
+        width: 200px;
+        transition: right 500ms;
+    }
+    
+    nav ul a{
+        flex-direction: column;
+    }
+    
+    header input.menu-check:checked ~ nav{
+        right: 0px;
+    }
+    .d-flex {
+        flex-wrap: wrap;
+    }
+
+    .d-flex div {
+        width: 100%;
+    }
+
+    nav {
+        display: none;
+    }
+}
